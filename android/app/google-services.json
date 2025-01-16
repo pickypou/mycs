@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231431457861",
+    "project_id": "mycs-b0307",
+    "storage_bucket": "mycs-b0307.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231431457861:android:01b8531a7017440f36e72c",
+        "android_client_info": {
+          "package_name": "com.example.mycs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADLTkmZmBzZnHnQ2o3agdI9O2ojfW7k1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
