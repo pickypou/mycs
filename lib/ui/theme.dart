@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../core/utils/calculated_font_size.dart';
+
 ThemeData theme = ThemeData(
   primaryColor: const Color(0xFFFAF6F1), // Couleur primaire
   scaffoldBackgroundColor: const Color(
@@ -22,24 +24,19 @@ ThemeData theme = ThemeData(
 
 // Style pour les titres avec la police Amable
 TextStyle titleStyle(BuildContext context) {
-  Size size = MediaQuery.sizeOf(context);
-  double titlefont = size.width / 11;
   return TextStyle(
-    fontSize: titlefont,
-    color: theme.colorScheme.secondary,
+    fontSize: calculateTitleFontSize(context),
+    color: theme.colorScheme.primary,
     fontFamily: "Roboto", // Utilise la police Amable
     decoration: TextDecoration.none,
   );
 }
 
 TextStyle titleStyleLarge(BuildContext context) {
-  Size size = MediaQuery.of(context).size;
-  double titleFontSize = size.width / 15;
-
   return TextStyle(
-    fontSize: titleFontSize,
+    fontSize: calculateTitleFontSize(context, ratio: 20),
     fontWeight: FontWeight.bold,
-    color: Theme.of(context).colorScheme.secondary,
+    color: Theme.of(context).colorScheme.primary,
     fontFamily: "Autography",
     decoration: TextDecoration.none,
   );
@@ -47,25 +44,20 @@ TextStyle titleStyleLarge(BuildContext context) {
 }
 
 TextStyle titleStyleMedium(BuildContext context) {
-  Size size = MediaQuery.of(context).size;
-  double titleFontSize = size.width / 27;
-
   return TextStyle(
-    fontSize: titleFontSize,
+    fontSize: calculateTitleFontSize(context, ratio: 30),
     fontWeight: FontWeight.w400,
-    color: Theme.of(context).colorScheme.secondary,
+    color: Theme.of(context).colorScheme.primary,
     fontFamily: "Autography", // Police Amable pour les grands titres
     decoration: TextDecoration.none,
   );
 }
 
 TextStyle titleStyleSmall(BuildContext context) {
-  Size size = MediaQuery.sizeOf(context);
-  double titleFontSize = size.width / 30;
   return TextStyle(
-    fontSize: titleFontSize,
+    fontSize: calculateTitleFontSize(context, ratio: 60),
     fontWeight: FontWeight.w400,
-    color: Theme.of(context).colorScheme.secondary,
+    color: Theme.of(context).colorScheme.primary,
     fontFamily: "Autography", // Police Amable pour les grands titres
     decoration: TextDecoration.none,
   );
@@ -73,32 +65,29 @@ TextStyle titleStyleSmall(BuildContext context) {
 
 // Style pour le texte avec la police Autography
 TextStyle textStyleText(BuildContext context) {
-  Size size = MediaQuery.sizeOf(context);
-  double textFontSize = size.width / 75;
+
   return
     GoogleFonts.montserrat().copyWith(
-      fontSize: textFontSize,
-      color: Theme.of(context).colorScheme.secondary,
+      fontSize: calculateFontSize(context, ratio: 70),
+      color: Theme.of(context).colorScheme.onPrimary,
       decoration: TextDecoration.none,
     );
 }
 
 TextStyle textStyleTextAccueil(BuildContext context) {
-  Size size = MediaQuery.sizeOf(context);
-  double textFontSize = size.width / 55;
+
   return  GoogleFonts.montserrat().copyWith(
-    fontSize: textFontSize,
-    color: Theme.of(context).colorScheme.secondary,
+    fontSize:calculateFontSize(context, ratio: 35),
+    color: Theme.of(context).colorScheme.onPrimary,
     decoration: TextDecoration.none,
   );
 }
 
-TextStyle textStyleTextBulle(BuildContext context) {
-  Size size = MediaQuery.sizeOf(context);
-  double textFontSize = size.width / 88;
+TextStyle textStyleTextAppBar(BuildContext context) {
+
   return
     GoogleFonts.montserrat().copyWith(
-      fontSize: textFontSize,
+      fontSize:calculateFontSize(context, ratio: 80),
       color: Theme.of(context).colorScheme.secondary,
       decoration: TextDecoration.none,
     );
