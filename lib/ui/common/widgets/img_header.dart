@@ -53,7 +53,7 @@ class ImgHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/box/box_1.jpg',
               fit: BoxFit.contain,
-              width: 350,
+              height: 350,
             ),
           ),
           Container(
@@ -70,7 +70,7 @@ class ImgHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/box/box_2.jpg',
               fit: BoxFit.contain,
-              width: 350,
+              height: 350,
             ),
           ),
           Container(
@@ -87,7 +87,7 @@ class ImgHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/yoga/yoga_1.jpeg',
               fit: BoxFit.contain,
-              width: 350,
+              height: 350,
             ),
           ),
         ],

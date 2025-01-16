@@ -12,7 +12,7 @@ ThemeData theme = ThemeData(
     primary: Color(0xFFFFB38E),
     onPrimary: Color(0xFF88C273),
     secondary: Color(0xFFFFE0B5),
-    onSecondary: Color(0xFFFF0000),
+    onSecondary: Color(0xFF809D3C),
     error: Color(0xFF000000),
     onError: Color(0xFFFFFFFF),
     surface: Color(  0xFFFAF6F1),
@@ -57,7 +57,7 @@ TextStyle titleStyleSmall(BuildContext context) {
   return TextStyle(
     fontSize: calculateTitleFontSize(context, ratio: 60),
     fontWeight: FontWeight.w400,
-    color: Theme.of(context).colorScheme.primary,
+    color: Theme.of(context).colorScheme.onSecondary,
     fontFamily: "Autography", // Police Amable pour les grands titres
     decoration: TextDecoration.none,
   );
@@ -69,7 +69,7 @@ TextStyle textStyleText(BuildContext context) {
   return
     GoogleFonts.montserrat().copyWith(
       fontSize: calculateFontSize(context, ratio: 70),
-      color: Theme.of(context).colorScheme.onPrimary,
+      color: Theme.of(context).colorScheme.onSecondary,
       decoration: TextDecoration.none,
     );
 }

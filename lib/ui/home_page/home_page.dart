@@ -103,6 +103,7 @@ class HomePage extends StatelessWidget {
                   height: 35,
                 ),
                 ImgHeader(),
+                const SizedBox(height: 35,),
                 Align(
                     alignment: Alignment.topLeft,
                     child:
@@ -110,6 +111,7 @@ class HomePage extends StatelessWidget {
                       "MYCS :",
                       style: titleStyleSmall(context),
                     )),
+                const SizedBox(height: 35,),
 
                 Text(
                   "1 sigle pour 4 mots: Moving Yoga Combat Seclin.",

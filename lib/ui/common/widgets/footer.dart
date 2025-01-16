@@ -11,7 +11,7 @@ class Footer extends StatelessWidget {
     return Column(
       children: [
         Divider(
-          color: theme.colorScheme.secondary,
+          color: theme.colorScheme.primary,
           thickness: 1,
         ),
         Padding(
