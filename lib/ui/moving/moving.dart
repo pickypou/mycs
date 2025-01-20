@@ -41,15 +41,14 @@ class Moving extends StatelessWidget {
                       style: textStyleText(context),),
                     const SizedBox(height: 30,),
                     Text("5 catégories d'âge, dès 6 ans et jusqu'aux adultes et seniors",style: textStyleTextAccueil(context),),
-                    const SizedBox(height: 55,),
 
-                    Footer()
                     
                    
                   ],
                 ),
               )
-          )
+          ),
+          bottomNavigationBar: Footer()
       );
     } else {
       return Scaffold(
@@ -82,13 +81,11 @@ class Moving extends StatelessWidget {
                     style: textStyleText(context),),
                     const SizedBox(height: 30,),
                     Text("5 catégories d'âge, dès 6 ans et jusqu'aux adultes et seniors",style: textStyleTextAccueil(context),),
-                    const SizedBox(height: 55,),
-
-                    Footer()
                   ],
                 ),
               )
-          )
+          ),
+          bottomNavigationBar: Footer()
       );
     }
   }

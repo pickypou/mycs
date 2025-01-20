@@ -50,6 +50,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       {'label': 'Accueil', 'route': '/'},
       {'label' : 'Moving', 'route': '/moving'},
       {'label' : 'Moving-show', 'route': '/moving_show'},
+      {'label' : 'Step-Mov', 'route': '/step_mov'},
       {'label' : 'Zen-Moving', 'route': '/zen_moving'},
 
 
@@ -108,6 +109,7 @@ class CustomDrawer extends StatelessWidget {
       {'label': 'Accueil', 'route': '/'},
       {'label' : 'Moving', 'route': '/moving'},
       {'label' : 'Moving-show', 'route': '/moving_show'},
+      {'label' : 'Step-Mov', 'route': '/step_mov'},
       {'label' : 'zen-Moving', 'route': '/zen_moving'},
 
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mycs/ui/common/widgets/custom_appbar.dart';
 import 'package:mycs/ui/common/widgets/footer.dart';
+import 'package:mycs/ui/common/widgets/img_step.dart';
 import 'package:mycs/ui/theme.dart';
 
 import '../common/widgets/img_moving.dart';
-import '../common/widgets/img_zen_moving.dart';
 
-class MovingShow extends StatelessWidget {
-  const MovingShow({super.key});
+class StepMov extends StatelessWidget {
+  const StepMov({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +26,26 @@ class MovingShow extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Moving Show",
+                    "Step Mov",
                     style: titleStyleLarge(context),
                   ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                ImgMoving(),
+                ImgStep(),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suite (chorégraphie) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
+                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiancemusicale rythmée.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "5 catégories d'âge, dès 6 ans et jusqu'aux adultes et seniors",
+                  "Adultes et dès 15 ans",
                   style: textStyleTextAccueil(context),
                 ),
               ],
@@ -66,26 +66,45 @@ class MovingShow extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Moving Show",
+                    "Step Mov",
                     style: titleStyleMedium(context),
                   ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                ImgMoving(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/images/step/step_1.jpeg",
+                      fit: BoxFit.contain,
+                      width: size.width * 0.3,
+                      height: size.height * 0.4,
+                    ),
+                    const SizedBox(
+                      width: 55,
+                    ),
+                    Image.asset(
+                      "assets/images/step/step_2.jpeg",
+                      fit: BoxFit.contain,
+                      width: size.width * 0.3,
+                      height: size.height * 0.3,
+                    )
+                  ],
+                ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suite (chorégraphie) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
+                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiancemusicale rythmée.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "5 catégories d'âge, dès 6 ans et jusqu'aux adultes et seniors",
+                  "Adultes et dès 15 ans",
                   style: textStyleTextAccueil(context),
                 ),
               ],

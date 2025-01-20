@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: "88399e291da5f7e889359681a8f64b18c5123e03576b01f32a6a276611e511c3"
+      sha256: "03f6da266a27a4538a69295ec142cb5717d7d4e5727b84658b63e1e1509bac9c"
       url: "https://pub.dev"
     source: hosted
-    version: "78.0.0"
+    version: "79.0.0"
   _flutterfire_internals:
     dependency: transitive
     description:
@@ -26,10 +26,10 @@ packages:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "62899ef43d0b962b056ed2ebac6b47ec76ffd003d5f7c4e4dc870afe63188e33"
+      sha256: c9040fc56483c22a5e04a9f6a251313118b1a3c42423770623128fa484115643
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.0"
+    version: "7.2.0"
   ansi_styles:
     dependency: transitive
     description:
@@ -389,7 +389,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "74d26757b14acb52c3040bc2fd196a951f80d476"
+      resolved-ref: "64072cdfd10befa71351bd7caa178f7341cb4581"
       url: "https://github.com/pickypou/flutter_utils.git"
     source: git
     version: "0.0.1"

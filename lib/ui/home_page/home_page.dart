@@ -82,11 +82,14 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 55,
                   ),
-                  const Footer()
+
                 ],
               ),
+
             ),
-          ));
+          ),
+          bottomNavigationBar: Footer()
+      );
     } else {
       return Scaffold(
         appBar: const CustomAppBar(title: ''),
@@ -151,14 +154,13 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 30,),
                 Text("Votre club sport, santé, bien-être", style: titleStyleSmall(context),),
-                const SizedBox(
-                  height: 55,
-                ),
-                const Footer()
+
+
               ],
             ),
           ),
         ),
+          bottomNavigationBar: Footer()
       );
     }
   }

@@ -16,6 +16,7 @@ import 'package:injectable/injectable.dart' as _i526;
 
 import '../../ui/moving/moving_module.dart' as _i442;
 import '../../ui/moving_show/moving_show_module.dart' as _i529;
+import '../../ui/step_mov/step_mov_module.dart' as _i640;
 import '../../ui/ui_module.dart' as _i573;
 import '../../ui/view_all/view_all_module.dart' as _i261;
 import '../../ui/zen_moving/zen_moving_module.dart' as _i750;
@@ -46,6 +47,8 @@ _i174.GetIt init(
       () => _i261.ViewAllModule(gh<_i573.AppRouter>()));
   gh.singleton<_i750.ZenMovingModule>(
       () => _i750.ZenMovingModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i640.StepMovModule>(
+      () => _i640.StepMovModule(gh<_i573.AppRouter>()));
   gh.factory<_i551.FirestoreService>(
       () => _i551.FirestoreService(gh<_i974.FirebaseFirestore>()));
   gh.factory<_i1042.StorageService>(
