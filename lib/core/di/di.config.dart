@@ -15,6 +15,7 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
 import '../../ui/moving/moving_module.dart' as _i442;
+import '../../ui/moving_show/moving_show_module.dart' as _i529;
 import '../../ui/ui_module.dart' as _i573;
 import '../../ui/view_all/view_all_module.dart' as _i261;
 import '../../ui/zen_moving/zen_moving_module.dart' as _i750;
@@ -39,6 +40,8 @@ _i174.GetIt init(
   gh.singleton<_i573.AppRouter>(() => _i573.AppRouter());
   gh.singleton<_i442.MovingModule>(
       () => _i442.MovingModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i529.MovingShowModule>(
+      () => _i529.MovingShowModule(gh<_i573.AppRouter>()));
   gh.singleton<_i261.ViewAllModule>(
       () => _i261.ViewAllModule(gh<_i573.AppRouter>()));
   gh.singleton<_i750.ZenMovingModule>(

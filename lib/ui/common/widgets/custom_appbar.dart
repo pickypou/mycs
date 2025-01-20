@@ -49,7 +49,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     final List<Map<String, String>> navItems = [
       {'label': 'Accueil', 'route': '/'},
       {'label' : 'Moving', 'route': '/moving'},
-      {'label' : 'Zen-Moving', 'route': '/zen_moving'}
+      {'label' : 'Moving-show', 'route': '/moving_show'},
+      {'label' : 'Zen-Moving', 'route': '/zen_moving'},
+
 
     ];
 
@@ -105,7 +107,9 @@ class CustomDrawer extends StatelessWidget {
     final List<Map<String, String>> drawerItems = [
       {'label': 'Accueil', 'route': '/'},
       {'label' : 'Moving', 'route': '/moving'},
-      {'label' : 'zen-Moving', 'route': '/zen_moving'}
+      {'label' : 'Moving-show', 'route': '/moving_show'},
+      {'label' : 'zen-Moving', 'route': '/zen_moving'},
+
 
     ];
 
