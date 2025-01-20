@@ -14,6 +14,7 @@ import 'package:firebase_storage/firebase_storage.dart' as _i457;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../ui/mov_combat/mov_combat_module.dart' as _i1009;
 import '../../ui/moving/moving_module.dart' as _i442;
 import '../../ui/moving_show/moving_show_module.dart' as _i529;
 import '../../ui/step_mov/step_mov_module.dart' as _i640;
@@ -43,12 +44,14 @@ _i174.GetIt init(
       () => _i442.MovingModule(gh<_i573.AppRouter>()));
   gh.singleton<_i529.MovingShowModule>(
       () => _i529.MovingShowModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i1009.MovCombatModule>(
+      () => _i1009.MovCombatModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i640.StepMovModule>(
+      () => _i640.StepMovModule(gh<_i573.AppRouter>()));
   gh.singleton<_i261.ViewAllModule>(
       () => _i261.ViewAllModule(gh<_i573.AppRouter>()));
   gh.singleton<_i750.ZenMovingModule>(
       () => _i750.ZenMovingModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i640.StepMovModule>(
-      () => _i640.StepMovModule(gh<_i573.AppRouter>()));
   gh.factory<_i551.FirestoreService>(
       () => _i551.FirestoreService(gh<_i974.FirebaseFirestore>()));
   gh.factory<_i1042.StorageService>(

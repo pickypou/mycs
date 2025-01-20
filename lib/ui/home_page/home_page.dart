@@ -144,6 +144,7 @@ class HomePage extends StatelessWidget {
                   "50 = 50 années d'existence de ce club d'aujourd'hui !",
                   style: textStyleText(context),
                 ),
+                const SizedBox(height: 30,),
                 Text(
                   "Un club cinquantenaire pour tous les âges et tous les niveaux.",
                   style: titleStyleSmall(context),
