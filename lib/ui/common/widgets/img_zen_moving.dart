@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/flutter_utils.dart';
 
-class ImgHeader extends StatelessWidget {
-  ImgHeader({super.key});
+class ImgZenMoving extends StatelessWidget {
+  ImgZenMoving({super.key});
 
   final List<String> images = [
-    'assets/images/moving/moving_7.jpeg',
-    'assets/images/box/box_2.jpg',
-    'assets/images/yoga/yoga_1.jpeg',
+    'assets/images/zen_moving/zen_moving_1.jpeg',
+    'assets/images/zen_moving/zen_moving_2.jpeg',
+    'assets/images/zen_moving/zen_moving_3.jpeg',
+    'assets/images/zen_moving/zen_moving_4.jpeg',
+    'assets/images/zen_moving/zen_moving_5.png',
+
   ];
   @override
   Widget build(BuildContext context) {
@@ -21,20 +24,20 @@ class ImgHeader extends StatelessWidget {
           useFadeTransition: true,
           duration: const Duration(seconds: 3),
           curve: Curves.easeInOut,
-          width: 300,
+          width: 400,
         ),
       );
-    } else if (size.width < 1121) {
+    } else {
       return Padding(
           padding: const EdgeInsets.all(20),
           child: ImageCarousel(
             imageUrl: images,
             height: 350,
-            fraction: 1,
+            fraction: 0.7,
             autoPlay: true,
             isFromAssets: true,
           ));
-    } else {
+    } /*else {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,7 +56,7 @@ class ImgHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/moving/moving_7.jpeg',
               fit: BoxFit.contain,
-             // height: 350,
+              // height: 350,
               //width: size.width*0.3,
             ),
           ),
@@ -93,6 +96,6 @@ class ImgHeader extends StatelessWidget {
           ),
         ],
       );
-    }
+    }*/
   }
 }

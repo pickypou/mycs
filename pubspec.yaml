@@ -83,8 +83,15 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
+    - assets/images/
     - assets/images/box/
     - assets/images/yoga/
+    - assets/images/capoeira/
+    - assets/images/moving/
+    - assets/images/president/
+    - assets/images/step/
+    - assets/images/yoga/
+    - assets/images/zen_moving/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

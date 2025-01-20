@@ -9,14 +9,14 @@ ThemeData theme = ThemeData(
       0xFFFAF6F1), // Couleur de fond par défaut (utilise primaryColor ou autre)
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
-    primary: Color(0xFFFFB38E),
-    onPrimary: Color(0xFF88C273),
-    secondary: Color(0xFFFFE0B5),
+    primary: Color(0xFF8CC63F),
+    onPrimary: Color(0xFF6AA84F),
+    secondary: Color(0xFF0072BC),
     onSecondary: Color(0xFF809D3C),
     error: Color(0xFF000000),
     onError: Color(0xFFFFFFFF),
-    surface: Color(  0xFFFAF6F1),
-    onSurface: Color(0xFF198393),
+    surface: Color(  0xFFee83c7),
+    onSurface: Color(0xFFB099D8),
   ),
 );
 
@@ -25,19 +25,20 @@ ThemeData theme = ThemeData(
 // Style pour les titres avec la police Amable
 TextStyle titleStyle(BuildContext context) {
   return TextStyle(
+
     fontSize: calculateTitleFontSize(context),
     color: theme.colorScheme.primary,
-    fontFamily: "Roboto", // Utilise la police Amable
+    fontFamily: "Amable", // Utilise la police Amable
     decoration: TextDecoration.none,
   );
 }
 
 TextStyle titleStyleLarge(BuildContext context) {
   return TextStyle(
-    fontSize: calculateTitleFontSize(context, ratio: 20),
+    fontSize: calculateTitleFontSize(context, ratio: 10),
     fontWeight: FontWeight.bold,
-    color: Theme.of(context).colorScheme.primary,
-    fontFamily: "Autography",
+    color: Theme.of(context).colorScheme.secondary,
+    fontFamily: "Amable",
     decoration: TextDecoration.none,
   );
 
@@ -47,8 +48,8 @@ TextStyle titleStyleMedium(BuildContext context) {
   return TextStyle(
     fontSize: calculateTitleFontSize(context, ratio: 30),
     fontWeight: FontWeight.w400,
-    color: Theme.of(context).colorScheme.primary,
-    fontFamily: "Autography", // Police Amable pour les grands titres
+    color: Theme.of(context).colorScheme.secondary,
+    fontFamily: "Amable", // Police Amable pour les grands titres
     decoration: TextDecoration.none,
   );
 }
@@ -58,10 +59,11 @@ TextStyle titleStyleSmall(BuildContext context) {
     fontSize: calculateTitleFontSize(context, ratio: 60),
     fontWeight: FontWeight.w400,
     color: Theme.of(context).colorScheme.onSecondary,
-    fontFamily: "Autography", // Police Amable pour les grands titres
+    fontFamily: "Amable", // Police Amable pour les grands titres
     decoration: TextDecoration.none,
   );
 }
+
 
 // Style pour le texte avec la police Autography
 TextStyle textStyleText(BuildContext context) {
@@ -69,7 +71,7 @@ TextStyle textStyleText(BuildContext context) {
   return
     GoogleFonts.montserrat().copyWith(
       fontSize: calculateFontSize(context, ratio: 70),
-      color: Theme.of(context).colorScheme.onSecondary,
+      color: Theme.of(context).colorScheme.secondary,
       decoration: TextDecoration.none,
     );
 }
@@ -77,8 +79,8 @@ TextStyle textStyleText(BuildContext context) {
 TextStyle textStyleTextAccueil(BuildContext context) {
 
   return  GoogleFonts.montserrat().copyWith(
-    fontSize:calculateFontSize(context, ratio: 35),
-    color: Theme.of(context).colorScheme.onPrimary,
+    fontSize:calculateFontSize(context, ratio: 100),
+    color: Theme.of(context).colorScheme.onSecondary,
     decoration: TextDecoration.none,
   );
 }
@@ -88,6 +90,7 @@ TextStyle textStyleTextAppBar(BuildContext context) {
   return
     GoogleFonts.montserrat().copyWith(
       fontSize:calculateFontSize(context, ratio: 80),
+      fontWeight: FontWeight.bold,
       color: Theme.of(context).colorScheme.secondary,
       decoration: TextDecoration.none,
     );

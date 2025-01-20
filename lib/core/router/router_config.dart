@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
+import 'package:mycs/ui/moving/moving_module.dart';
 import 'package:mycs/ui/view_all/view_all_module.dart';
 import '../../core/di/di.dart';
+import '../../ui/zen_moving/zen_moving_module.dart';
 
 
 @singleton
@@ -10,6 +12,8 @@ class AppRouterConfig {
   GoRouter get router => GoRouter(
     routes: [
       ...getIt<ViewAllModule>().getRoutes(),
+      ...getIt<MovingModule>().getRoutes(),
+      ...getIt<ZenMovingModule>().getRoutes(),
     ],
     errorBuilder: (context, state) => const ErrorPage(),
   );

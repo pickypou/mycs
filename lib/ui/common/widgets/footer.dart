@@ -7,7 +7,7 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+Size size = MediaQuery.sizeOf(context);
     return Column(
       children: [
         Divider(
@@ -19,6 +19,7 @@ class Footer extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              Image.asset("assets/images/logo.png", fit: BoxFit.contain,width: size.width /15,),
               Text("© 2025 MYCS tous droits réservés", style: textStyleText(context)),
 
             ],

@@ -48,6 +48,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   List<Widget> generateNavActions(BuildContext context) {
     final List<Map<String, String>> navItems = [
       {'label': 'Accueil', 'route': '/'},
+      {'label' : 'Moving', 'route': '/moving'},
+      {'label' : 'Zen-Moving', 'route': '/zen_moving'}
 
     ];
 
@@ -72,7 +74,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     final isWideScreen = MediaQuery.of(context).size.width > 749;
 
     return AppBar(
-      backgroundColor: theme.colorScheme.onPrimary,
+      backgroundColor: theme.colorScheme.onSurface,
       title: Text(
         title,
         textAlign: TextAlign.center,
@@ -86,7 +88,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           )),
         if (onNavigate != null)
           IconButton(
-            icon: const Icon(Icons.new_releases, color: Colors.white),
+            icon:  Icon(Icons.new_releases, color: theme.colorScheme.surface),
             onPressed: onNavigate!,
           ),
         if (isWideScreen) ...generateNavActions(context),
@@ -102,6 +104,8 @@ class CustomDrawer extends StatelessWidget {
   List<Widget> generateDrawerItems(BuildContext context) {
     final List<Map<String, String>> drawerItems = [
       {'label': 'Accueil', 'route': '/'},
+      {'label' : 'Moving', 'route': '/moving'},
+      {'label' : 'zen-Moving', 'route': '/zen_moving'}
 
     ];
 
@@ -119,7 +123,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: theme.colorScheme.onPrimary,
+      backgroundColor: theme.colorScheme.onSurface,
       elevation: 0,
       child: ListView(
         padding: const EdgeInsets.fromLTRB(10, 25, 0, 0),

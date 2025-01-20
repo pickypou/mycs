@@ -13,5 +13,5 @@ double calculateFontSize(BuildContext context, {double? ratio}) {
   // Ratio pour le texte classique
   return ratio != null
       ? (size.width > 749 ? size.width / ratio : 16)
-      : (size.width > 749 ? size.width / 75 : 16); // Valeur par défaut
+      : (size.width > 749 ? size.width / 95 : 16); // Valeur par défaut
 }
