@@ -4,8 +4,6 @@ import 'package:mycs/ui/common/widgets/footer.dart';
 import 'package:mycs/ui/common/widgets/img_step.dart';
 import 'package:mycs/ui/theme.dart';
 
-import '../common/widgets/img_moving.dart';
-
 class StepMov extends StatelessWidget {
   const StepMov({super.key});
 
@@ -38,7 +36,7 @@ class StepMov extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiancemusicale rythmée.",
+                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiance musicale rythmée.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(
@@ -97,7 +95,7 @@ class StepMov extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiancemusicale rythmée.",
+                  "L'alliance d'une troisième dimension avec l'utilisation du Step pour la pratique d'un Moving différent. Dynamisme, équilibre, renforcement des membres inferieurs dans une ambiance musicale rythmée.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(

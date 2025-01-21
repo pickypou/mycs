@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycs/ui/common/widgets/clickable_image.dart';
 import '../../theme.dart';
 
 class Footer extends StatelessWidget {
@@ -7,7 +8,6 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: 56.0), // Hauteur maximale fixée
       child: Column(
@@ -23,11 +23,9 @@ class Footer extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    "assets/images/logo.png",
-                    fit: BoxFit.contain,
-                    width: size.width / 15,
-                  ),
+                  ClickableImage(
+                      imagePath: 'assets/images/logo.png',
+                      route: "/admin"),
                   Flexible(
                     child: Text(
                       "© 2025 MYCS tous droits réservés",

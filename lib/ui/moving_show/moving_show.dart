@@ -4,7 +4,6 @@ import 'package:mycs/ui/common/widgets/footer.dart';
 import 'package:mycs/ui/theme.dart';
 
 import '../common/widgets/img_moving.dart';
-import '../common/widgets/img_zen_moving.dart';
 
 class MovingShow extends StatelessWidget {
   const MovingShow({super.key});
@@ -38,7 +37,7 @@ class MovingShow extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suite (chorégraphie) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
+                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suites (chorégraphies) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(
@@ -78,7 +77,7 @@ class MovingShow extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suite (chorégraphie) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
+                  "Sport d'expression, le Moving se montre et permet à celles et ceux qui le souhaitent de se dépasser par l'apprentissage et la construction de suites (chorégraphies) de Moving ajoutant aux qualités du Moving, le travail en groupe et les représentations sur scène.",
                   style: textStyleText(context),
                 ),
                 const SizedBox(
