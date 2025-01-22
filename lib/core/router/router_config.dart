@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
+import 'package:mycs/ui/account/account_module.dart';
 import 'package:mycs/ui/admin_page/admin_page_module.dart';
+import 'package:mycs/ui/contact/contact_module.dart';
 import 'package:mycs/ui/mov_combat/mov_combat_module.dart';
 import 'package:mycs/ui/moving/moving_module.dart';
 import 'package:mycs/ui/moving_show/moving_show_module.dart';
+import 'package:mycs/ui/planning/planning_module.dart';
 import 'package:mycs/ui/step_mov/step_mov_module.dart';
 import 'package:mycs/ui/users/add_user_module.dart';
 import 'package:mycs/ui/users/login/login_module.dart';
@@ -25,7 +28,11 @@ class AppRouterConfig {
       ...getIt<MovCombatModule>().getRoutes(),
       ...getIt<AddUserModule>().getRoutes(),
       ...getIt<LoginModule>().getRoutes(),
-      ...getIt<AdminPageModule>().getRoutes()
+      ...getIt<AdminPageModule>().getRoutes(),
+      ...getIt<AccountModule>().getRoutes(),
+      ...getIt<PlanningModule>().getRoutes(),
+      ...getIt<ContactModule>().getRoutes(),
+
     ],
     errorBuilder: (context, state) => const ErrorPage(),
   );

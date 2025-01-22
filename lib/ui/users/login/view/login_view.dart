@@ -42,7 +42,7 @@ class LoginView extends StatelessWidget {
       },
       builder: (context, constraints) {
         return Scaffold(
-          appBar: AppBar(title: const Text('Connexion')),
+
           body: Padding(
             padding: const EdgeInsets.all(10.0),
             child: ListView(

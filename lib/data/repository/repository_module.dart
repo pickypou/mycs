@@ -7,7 +7,7 @@ import 'package:mycs/data/repository/users_repository_impl.dart';
 
 import '../../core/api/firestore_service.dart';
 import '../../core/di/di.dart';
-import 'evenement-repository_impl.dart';
+import 'evenement_repository_impl.dart';
 import 'evenement_repository.dart';
 
 void setupDataModule() {

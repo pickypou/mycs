@@ -33,6 +33,13 @@ class Footer extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
+                  Flexible(child:
+                  Text(
+                    "N° d'agrément Jeunesse et Sport : 59s2",
+                    style: textStyleTextAccueil(context),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  ),
                 ],
               ),
             ),

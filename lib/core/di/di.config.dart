@@ -15,18 +15,21 @@ import 'package:firebase_storage/firebase_storage.dart' as _i457;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../../data/repository/evenement-repository_impl.dart' as _i720;
 import '../../data/repository/evenement_repository.dart' as _i590;
+import '../../data/repository/evenement_repository_impl.dart' as _i1053;
 import '../../data/repository/users_repository.dart' as _i151;
 import '../../data/repository/users_repository_impl.dart' as _i304;
 import '../../domain/usecase/fetch_evenement_data_usecase.dart' as _i1046;
 import '../../domain/usecase/fetch_user_data_usecase.dart' as _i487;
 import '../../domain/usecase/generate_and_upload_thumbnail_use_case.dart'
     as _i122;
+import '../../ui/account/account_module.dart' as _i692;
 import '../../ui/admin_page/admin_page_module.dart' as _i727;
+import '../../ui/contact/contact_module.dart' as _i106;
 import '../../ui/mov_combat/mov_combat_module.dart' as _i1009;
 import '../../ui/moving/moving_module.dart' as _i442;
 import '../../ui/moving_show/moving_show_module.dart' as _i529;
+import '../../ui/planning/planning_module.dart' as _i18;
 import '../../ui/step_mov/step_mov_module.dart' as _i640;
 import '../../ui/ui_module.dart' as _i573;
 import '../../ui/users/add_user_module.dart' as _i753;
@@ -60,14 +63,20 @@ _i174.GetIt init(
   gh.lazySingleton<_i59.FirebaseAuth>(() => appModule.firebaseAuth);
   gh.lazySingleton<_i457.FirebaseStorage>(() => appModule.firebaseStorage);
   gh.lazySingleton<_i974.FirebaseFirestore>(() => appModule.firebaseFirestore);
+  gh.singleton<_i692.AccountModule>(
+      () => _i692.AccountModule(gh<_i573.AppRouter>()));
   gh.singleton<_i727.AdminPageModule>(
       () => _i727.AdminPageModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i106.ContactModule>(
+      () => _i106.ContactModule(gh<_i573.AppRouter>()));
   gh.singleton<_i442.MovingModule>(
       () => _i442.MovingModule(gh<_i573.AppRouter>()));
   gh.singleton<_i529.MovingShowModule>(
       () => _i529.MovingShowModule(gh<_i573.AppRouter>()));
   gh.singleton<_i1009.MovCombatModule>(
       () => _i1009.MovCombatModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i18.PlanningModule>(
+      () => _i18.PlanningModule(gh<_i573.AppRouter>()));
   gh.singleton<_i640.StepMovModule>(
       () => _i640.StepMovModule(gh<_i573.AppRouter>()));
   gh.singleton<_i753.AddUserModule>(
@@ -86,17 +95,17 @@ _i174.GetIt init(
       () => _i893.AuthService(gh<_i59.FirebaseAuth>()));
   gh.factory<_i551.FirestoreService>(
       () => _i551.FirestoreService(gh<_i974.FirebaseFirestore>()));
+  gh.factory<_i1046.FetchEvenementDataUseCase>(() =>
+      _i1046.FetchEvenementDataUseCase(gh<_i1053.EvenementsRepositoryImpl>()));
   gh.factory<_i487.FetchUserDataUseCase>(() => _i487.FetchUserDataUseCase(
         gh<String>(),
         gh<_i304.UsersRepositoryImpl>(),
       ));
-  gh.factory<StorageService>(() => StorageService(gh<_i457.FirebaseStorage>()));
-  gh.factory<_i590.EvenementsRepository>(() => _i720.EvenementsRepositoryImpl(
+  gh.factory<_i590.EvenementsRepository>(() => _i1053.EvenementsRepositoryImpl(
         gh<_i974.FirebaseFirestore>(),
         gh<_i457.FirebaseStorage>(),
       ));
-  gh.factory<_i1046.FetchEvenementDataUseCase>(() =>
-      _i1046.FetchEvenementDataUseCase(gh<_i720.EvenementsRepositoryImpl>()));
+  gh.factory<StorageService>(() => StorageService(gh<_i457.FirebaseStorage>()));
   return getIt;
 }
 

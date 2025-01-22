@@ -37,15 +37,7 @@ class AddUserView extends StatelessWidget {
     Size size = MediaQuery.sizeOf(context);
     if (size.width < 749) {
       return Scaffold(
-          appBar: AppBar(
-            title: const Text('Inscripion'),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.of(context).pop(); // Revenir à la page précédente
-              },
-            ),
-          ),
+
           body: Padding(
             padding: const EdgeInsets.all(35),
             child: Column(
@@ -107,7 +99,7 @@ class AddUserView extends StatelessWidget {
           ));
     } else {
       return Scaffold(
-          appBar: AppBar(title: const Text('Inscripion')),
+
           body: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(35),

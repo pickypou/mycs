@@ -1,7 +1,7 @@
 
 import 'package:get_it/get_it.dart';
 
-import '../../data/repository/evenement-repository_impl.dart';
+import '../../data/repository/evenement_repository_impl.dart';
 import '../../data/repository/users_repository_impl.dart';
 import 'fetch_evenement_data_usecase.dart';
 import 'fetch_user_data_usecase.dart';

@@ -67,7 +67,6 @@ TextStyle titleStyleSmall(BuildContext context) {
 
 // Style pour le texte avec la police Autography
 TextStyle textStyleText(BuildContext context) {
-
   return
     GoogleFonts.montserrat().copyWith(
       fontSize: calculateFontSize(context, ratio: 70),
@@ -75,6 +74,7 @@ TextStyle textStyleText(BuildContext context) {
       decoration: TextDecoration.none,
     );
 }
+
 
 TextStyle textStyleTextAccueil(BuildContext context) {
 

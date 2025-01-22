@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import '../../data/repository/evenement-repository_impl.dart';
+import '../../data/repository/evenement_repository_impl.dart';
 import '../entity/evenements.dart';
 
 @injectable
