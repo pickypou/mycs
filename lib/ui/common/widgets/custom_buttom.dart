@@ -38,9 +38,9 @@ class CustomButton extends StatelessWidget {
             backgroundColor: WidgetStateProperty.resolveWith<Color>(
                   (states) {
                 if (states.contains(WidgetState.pressed)) {
-                  return theme.colorScheme.secondary; // Fond quand pressé
+                  return theme.colorScheme.primary; // Fond quand pressé
                 }
-                return theme.colorScheme.primary; // Fond par défaut
+                return theme. primaryColor; // Fond par défaut
               },
             ),
             shape: WidgetStateProperty.resolveWith<RoundedRectangleBorder>(
@@ -48,7 +48,7 @@ class CustomButton extends StatelessWidget {
                 return RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                   side: BorderSide(
-                    color: theme.colorScheme.onPrimary,
+                    color: theme.colorScheme.surface,
                     width: states.contains(WidgetState.pressed) ? 3.0 : 3.0, // Bordure dynamique
                   ),
                 );
@@ -68,8 +68,8 @@ class CustomButton extends StatelessWidget {
                 label,
                 style: TextStyle(fontSize: calculatedFontSize,
                   color: isPressed
-                      ? theme.colorScheme.onPrimary // Texte quand pressé
-                      : theme.colorScheme.secondary, // Texte par défaut
+                      ? theme.colorScheme.secondary // Texte quand pressé
+                      : theme.colorScheme.surface, // Texte par défaut
                 ),
               );
             },

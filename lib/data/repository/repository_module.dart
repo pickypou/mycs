@@ -1,7 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:mycs/data/repository/users_repository.dart';
 import 'package:mycs/data/repository/users_repository_impl.dart';
 
@@ -20,8 +20,8 @@ void setupDataModule() {
 
 
   getIt.registerLazySingleton<EvenementsRepository>(() =>
-      EvenementsRepositoryImpl(
-          getIt<FirebaseFirestore>(), getIt<FirebaseStorage>()));
+      EvenementsRepositoryImpl());
+
 
   getIt.registerLazySingleton<UsersRepository>(() =>
       UsersRepositoryImpl(getIt<FirebaseFirestore>(), getIt<FirebaseAuth>()));

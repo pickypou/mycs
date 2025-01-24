@@ -13,7 +13,7 @@ ThemeData theme = ThemeData(
     onPrimary: Color(0xFF6AA84F),
     secondary: Color(0xFF0072BC),
     onSecondary: Color(0xFF809D3C),
-    error: Color(0xFF000000),
+    error: Colors.transparent,
     onError: Color(0xFFFFFFFF),
     surface: Color(  0xFFee83c7),
     onSurface: Color(0xFFB099D8),

@@ -13,4 +13,5 @@ abstract class AppModule {
 
   @lazySingleton
   FirebaseFirestore get firebaseFirestore => FirebaseFirestore.instance;
+
 }

@@ -15,7 +15,6 @@ import 'package:firebase_storage/firebase_storage.dart' as _i457;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../../data/repository/evenement_repository.dart' as _i590;
 import '../../data/repository/evenement_repository_impl.dart' as _i1053;
 import '../../data/repository/users_repository.dart' as _i151;
 import '../../data/repository/users_repository_impl.dart' as _i304;
@@ -26,6 +25,12 @@ import '../../domain/usecase/generate_and_upload_thumbnail_use_case.dart'
 import '../../ui/account/account_module.dart' as _i692;
 import '../../ui/admin_page/admin_page_module.dart' as _i727;
 import '../../ui/contact/contact_module.dart' as _i106;
+import '../../ui/evenements/add_evenement/add_evenement_module.dart' as _i966;
+import '../../ui/evenements/add_evenement/add_evenements_interactor.dart'
+    as _i374;
+import '../../ui/evenements/evenement_page/evenement_page_module.dart';
+import '../../ui/evenements/remove_evenement/remove_evenement_module.dart'
+    as _i331;
 import '../../ui/mov_combat/mov_combat_module.dart' as _i1009;
 import '../../ui/moving/moving_module.dart' as _i442;
 import '../../ui/moving_show/moving_show_module.dart' as _i529;
@@ -39,7 +44,7 @@ import '../../ui/zen_moving/zen_moving_module.dart' as _i750;
 import '../api/auth_service.dart' as _i893;
 import '../api/firebase_client.dart' as _i785;
 import '../api/firestore_service.dart' as _i551;
-import '../api/storage_service.dart';
+import '../api/storage_service.dart' as _i1042;
 import '../router/router_config.dart' as _i718;
 import 'di_module.dart' as _i211;
 
@@ -58,6 +63,8 @@ _i174.GetIt init(
   gh.factory<_i785.FirebaseClient>(() => _i785.FirebaseClient());
   gh.factory<_i122.GenerateThumbnailUseCase>(
       () => _i122.GenerateThumbnailUseCase());
+  gh.factory<_i374.AddEvenementsInteractor>(
+      () => _i374.AddEvenementsInteractor());
   gh.singleton<_i718.AppRouterConfig>(() => _i718.AppRouterConfig());
   gh.singleton<_i573.AppRouter>(() => _i573.AppRouter());
   gh.lazySingleton<_i59.FirebaseAuth>(() => appModule.firebaseAuth);
@@ -69,6 +76,12 @@ _i174.GetIt init(
       () => _i727.AdminPageModule(gh<_i573.AppRouter>()));
   gh.singleton<_i106.ContactModule>(
       () => _i106.ContactModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i966.AddEvenementModule>(
+      () => _i966.AddEvenementModule(gh<_i573.AppRouter>()));
+  gh.singleton<EvenementPageModule>(
+      () => EvenementPageModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i331.RemoveEvenementModule>(
+      () => _i331.RemoveEvenementModule(gh<_i573.AppRouter>()));
   gh.singleton<_i442.MovingModule>(
       () => _i442.MovingModule(gh<_i573.AppRouter>()));
   gh.singleton<_i529.MovingShowModule>(
@@ -95,17 +108,19 @@ _i174.GetIt init(
       () => _i893.AuthService(gh<_i59.FirebaseAuth>()));
   gh.factory<_i551.FirestoreService>(
       () => _i551.FirestoreService(gh<_i974.FirebaseFirestore>()));
-  gh.factory<_i1046.FetchEvenementDataUseCase>(() =>
-      _i1046.FetchEvenementDataUseCase(gh<_i1053.EvenementsRepositoryImpl>()));
   gh.factory<_i487.FetchUserDataUseCase>(() => _i487.FetchUserDataUseCase(
         gh<String>(),
         gh<_i304.UsersRepositoryImpl>(),
       ));
-  gh.factory<_i590.EvenementsRepository>(() => _i1053.EvenementsRepositoryImpl(
-        gh<_i974.FirebaseFirestore>(),
-        gh<_i457.FirebaseStorage>(),
-      ));
-  gh.factory<StorageService>(() => StorageService(gh<_i457.FirebaseStorage>()));
+  gh.factory<_i1053.EvenementsRepositoryImpl>(
+      () => _i1053.EvenementsRepositoryImpl(
+            firestore: gh<_i974.FirebaseFirestore>(),
+            storage: gh<_i457.FirebaseStorage>(),
+          ));
+  gh.factory<_i1042.StorageService>(
+      () => _i1042.StorageService(gh<_i457.FirebaseStorage>()));
+  gh.factory<_i1046.FetchEvenementDataUseCase>(() =>
+      _i1046.FetchEvenementDataUseCase(gh<_i1053.EvenementsRepositoryImpl>()));
   return getIt;
 }
 

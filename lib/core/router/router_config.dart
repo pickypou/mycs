@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mycs/ui/account/account_module.dart';
+import 'package:mycs/ui/evenements/add_evenement/add_evenement_module.dart';
 import 'package:mycs/ui/admin_page/admin_page_module.dart';
 import 'package:mycs/ui/contact/contact_module.dart';
+import 'package:mycs/ui/evenements/evenement_page/evenement_page_module.dart';
+import 'package:mycs/ui/evenements/remove_evenement/remove_evenement_module.dart';
 import 'package:mycs/ui/mov_combat/mov_combat_module.dart';
 import 'package:mycs/ui/moving/moving_module.dart';
 import 'package:mycs/ui/moving_show/moving_show_module.dart';
@@ -30,8 +33,11 @@ class AppRouterConfig {
       ...getIt<LoginModule>().getRoutes(),
       ...getIt<AdminPageModule>().getRoutes(),
       ...getIt<AccountModule>().getRoutes(),
+      ...getIt<EvenementPageModule>().getRoutes(),
       ...getIt<PlanningModule>().getRoutes(),
       ...getIt<ContactModule>().getRoutes(),
+      ...getIt<AddEvenementModule>().getRoutes(),
+      ...getIt<RemoveEvenementModule>().getRoutes()
 
     ],
     errorBuilder: (context, state) => const ErrorPage(),

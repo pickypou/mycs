@@ -1,18 +1,24 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../domain/entity/evenements.dart';
 import '../dto/evenement_dto.dart';
 import 'evenement_repository.dart';
 
-@Injectable(as: EvenementsRepository)
-class EvenementsRepositoryImpl extends EvenementsRepository {
+
+
+@injectable
+class EvenementsRepositoryImpl implements EvenementsRepository {
   final FirebaseFirestore _firestore;
   final FirebaseStorage _storage;
 
-  EvenementsRepositoryImpl(this._firestore, this._storage);
+  EvenementsRepositoryImpl({
+    FirebaseFirestore? firestore,
+    FirebaseStorage? storage,
+  })  : _firestore = firestore ?? FirebaseFirestore.instance,
+        _storage = storage ?? FirebaseStorage.instance;
 
   @override
   Stream<Iterable<Evenement>> getEvenementStream() {
@@ -86,27 +92,11 @@ class EvenementsRepositoryImpl extends EvenementsRepository {
   }
 
   @override
-  Future<void> add(EvenementDto evenementDto) async {
-    await _firestore
-        .collection('evenement')
-        .doc(evenementDto.id)
-        .set(evenementDto.toJson());
-  }
-  @override
-  Future<void> deleteEvenement(String evenementId) async {
-    await _firestore.collection('evenement').doc(evenementId).delete();
-    await _storage.ref('evenement/$evenementId').listAll().then((result) {
-      for (var ref in result.items) {
-        ref.delete();
-      }
-    });
-  }
-
-  @override
-  Future<Map<String, dynamic>?> getById(String evenementId) async {
-    final doc = await _firestore.collection('evenement').doc(evenementId).get();
-    if (doc.exists) {
-      final data = doc.data()!;
+  Future<EvenementDto?> getById(String evenementId) async {
+    final docSnapshot =
+    await _firestore.collection('evenement').doc(evenementId).get();
+    if (docSnapshot.exists) {
+      final data = docSnapshot.data()!;
       final eventRef = _storage.ref().child('evenement/$evenementId');
 
       try {
@@ -148,9 +138,27 @@ class EvenementsRepositoryImpl extends EvenementsRepository {
             'Erreur lors de la récupération des fichiers pour l\'événement $evenementId: $e');
       }
 
-      return data;
+      return EvenementDto.fromJson(data);
     }
     return null;
+  }
+
+  @override
+  Future<void> add(EvenementDto evenementDto) async {
+    await _firestore
+        .collection('evenement')
+        .doc(evenementDto.id)
+        .set(evenementDto.toJson());
+  }
+
+  @override
+  Future<void> deleteEvenement(String evenementId) async {
+    await _firestore.collection('evenement').doc(evenementId).delete();
+    await _storage.ref('evenement/$evenementId').listAll().then((result) {
+      for (var ref in result.items) {
+        ref.delete();
+      }
+    });
   }
 
   @override
@@ -160,6 +168,4 @@ class EvenementsRepositoryImpl extends EvenementsRepository {
       fieldName: newValue,
     });
   }
-
-
 }

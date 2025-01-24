@@ -34,7 +34,7 @@ class CustomTextField extends StatelessWidget {
           width: textFieldWidth,
           child: TextField(
             controller: controller,
-            style: textStyleText(context).copyWith(fontSize: 14.0),
+            style: textStyleInput(context, labelText),
             maxLines: maxLines,
             obscureText: obscureText,
             decoration: InputDecoration(
@@ -51,7 +51,7 @@ class CustomTextField extends StatelessWidget {
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.0),
                 borderSide: BorderSide(
-                  color: theme.colorScheme.primary, // Couleur primaire au focus
+                  color: theme.colorScheme.surface, // Couleur primaire au focus
                   width: 2.0, // Épaisseur accrue au focus
                 ),
               ),
