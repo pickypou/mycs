@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mycs/ui/common/widgets/footer.dart';
-import 'package:mycs/ui/theme.dart';
+
 import '../../../../domain/entity/evenements.dart';
+import '../../../theme.dart';
 import '../evenement_interactor.dart';
 import '../event_handler.dart';
 
@@ -41,6 +41,7 @@ class EvenementListViewState extends State<EvenementListView> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     if (_isLoading) {
       return const Center(child: CircularProgressIndicator());
@@ -51,7 +52,7 @@ class EvenementListViewState extends State<EvenementListView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(_errorMessage!, style: textStyleText(context)),
+            Text(_errorMessage!, style: TextStyle(color: Colors.red)),
             ElevatedButton(
               onPressed: _loadEvenements,
               child: const Text('Réessayer'),
@@ -62,7 +63,7 @@ class EvenementListViewState extends State<EvenementListView> {
     }
 
     if (_evenements.isEmpty) {
-      return  Center(child: Text("Aucun événement disponible", style: textStyleText(context),));
+      return const Center(child: Text("Aucun événement disponible"));
     }
 
     return LayoutBuilder(
@@ -73,11 +74,12 @@ class EvenementListViewState extends State<EvenementListView> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Text(
-                  "Nos, Evénements",style: titleStyleMedium(context),
+                padding: const EdgeInsets.fromLTRB(25, 50, 25, 0),
+                child:Text(
+                  "Nos Evénements",style: titleStyleMedium(context),
                 ),
               ),
+              const SizedBox(height: 75,),
               Wrap(
                 spacing: 16,
                 runSpacing: 16,
@@ -87,6 +89,7 @@ class EvenementListViewState extends State<EvenementListView> {
                     width: cardWidth,
                     child: Card(
                       elevation: 4,
+                      color: theme.primaryColor,
                       child: InkWell(
                         onTap: () => eventHandler.handleDocumentTap(
                           context,
@@ -119,21 +122,20 @@ class EvenementListViewState extends State<EvenementListView> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     evt.title.isNotEmpty
                                         ? evt.title
                                         : "Sans titre",
-                                    style: textStyleText(context),
+                                    style: textStyleText(context),textAlign: TextAlign.center,
                                   ),
                                   const SizedBox(height: 4),
 
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 55,),
-
                           ],
                         ),
                       ),

@@ -91,7 +91,7 @@ class AccountViewState extends State<AccountView> {
                 CustomButton(
                   label: 'Je crée un événement',
                   onPressed: () {
-                    GoRouter.of(context).go('/evenement');
+                    GoRouter.of(context).go('/add_evenement');
                   },
                 ),
                 const SizedBox(height: 50),

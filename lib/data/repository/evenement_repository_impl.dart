@@ -32,6 +32,7 @@ class EvenementsRepositoryImpl implements EvenementsRepository {
             try {
               final eventRef =
               _storage.ref().child('evenement/${evenement.id}');
+              debugPrint("Traitement de l'événement : ${evenement.id}");
 
               // Lister tous les fichiers dans le dossier de l'événement
               final ListResult result = await eventRef.listAll();
@@ -56,6 +57,7 @@ class EvenementsRepositoryImpl implements EvenementsRepository {
                 for (Reference ref in result.items) {
                   if (ref.name.toLowerCase().contains('thumbnail')) {
                     thumbnailUrl = await ref.getDownloadURL();
+                    debugPrint("URL de la vignette PDF : $thumbnailUrl");
                     break;
                   }
                 }
@@ -63,6 +65,7 @@ class EvenementsRepositoryImpl implements EvenementsRepository {
                 thumbnailUrl =
                     fileUrl; // Pour les images, utiliser le fichier principal comme vignette
               }
+              debugPrint("URL finale de la miniature : ${thumbnailUrl ?? "Aucune"}");
 
               if (fileUrl != null) {
                 return Evenement(

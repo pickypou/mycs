@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mycs/ui/theme.dart';
 
 import '../../../../domain/entity/evenements.dart';
 import '../evenement_interactor.dart';
@@ -24,7 +23,9 @@ class EvenementPageState extends State<EvenementPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: Text("Événements"),
+      ),
       body: FutureBuilder<List<Evenement>>(
         future: evenementsFuture,
         builder: (context, snapshot) {
@@ -33,7 +34,7 @@ class EvenementPageState extends State<EvenementPage> {
           } else if (snapshot.hasError) {
             return Center(child: Text("Erreur : ${snapshot.error}"));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text("Aucun événement trouvé", style: textStyleText(context),));
+            return Center(child: Text("Aucun événement trouvé"));
           } else {
             final evenements = snapshot.data!;
             return ListView.builder(

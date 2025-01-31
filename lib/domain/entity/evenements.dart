@@ -21,13 +21,15 @@ class Evenement {
 
   // Retourne l'image de la vignette ou une image par défaut
   ImageProvider<Object> getThumbnailImage() {
+    print('Chargement de la vignette : $thumbnailUrl'); // Debug
     if (thumbnailUrl != null && thumbnailUrl!.isNotEmpty) {
       return NetworkImage(thumbnailUrl!);
     } else {
-      // Utiliser une image par défaut si la vignette n'existe pas
-      return const AssetImage('assets/images/logo_cocon.png');
+      print('Aucune vignette trouvée, utilisation du logo par défaut.');
+      return const AssetImage('assets/images/logo.png');
     }
   }
+
 
   // Formatte la date au format (DD/MM/YYYY)
   String get formattedPublishDate {

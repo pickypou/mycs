@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-
 import '../../../core/di/di.dart';
 import '../../../domain/entity/evenements.dart';
 import '../../../domain/usecase/fetch_evenement_data_usecase.dart';
-
 
 class EvenementInteractor {
   final FetchEvenementDataUseCase fetchEvenementDataUseCase =

@@ -26,3 +26,9 @@ plugins {
 }
 
 include ":app"
+
+
+def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
+
+def plugins = new File(flutterProjectRoot.toFile(), '.flutter-plugins-dependencies')
+apply from: plugins.exists() ? plugins : "${flutterProjectRoot}/.flutter-plugins"

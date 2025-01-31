@@ -22,7 +22,7 @@ class AddEvenementModule implements UIModule {
   List<RouteBase> getRoutes() {
     return [
       GoRoute(
-        path: '/evenement',
+        path: '/add_evenement',
         pageBuilder: (context, state) {
           return MaterialPage(
             child: _buildEvenementPage(),

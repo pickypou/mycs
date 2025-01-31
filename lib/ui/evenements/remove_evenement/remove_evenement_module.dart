@@ -51,7 +51,7 @@ class RemoveEvenementModule implements UIModule {
         FetchEvenementDataUseCase fetchEvenementDataUseCase =
         getIt<FetchEvenementDataUseCase>();
         final String evenementId = '';
-        var interactor = EvenementListInteractor();
+        var interactor = EvenementListInteractor(getIt<FetchEvenementDataUseCase>(), getIt<EvenementsRepositoryImpl>());
 
 
         return RemoveEvenementBloc(interactor, evenementId: evenementId);

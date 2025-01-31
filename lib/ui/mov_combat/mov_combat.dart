@@ -54,7 +54,7 @@ class MovCombat extends StatelessWidget {
                     ),
                     Text("Depuis 1976 à Seclin, la boxe Américaine est pratiquée au MYCS pour le loisir, le combat et la condition physique.",
                     style: textStyleText(context).copyWith(fontWeight: FontWeight.bold),),
-                    Text("Apparue en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gages de puissance.",
+                    Text("Apparue en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gage de puissance.",
                       style: textStyleText(context),),
                     const SizedBox(height: 30,),
                     Text(
@@ -76,7 +76,7 @@ class MovCombat extends StatelessWidget {
                       height: 20,
                     ),
 
-                    Text("Art de lutte brésilien éxécuté sur un rythme et avec des instruments du Brésil, c'est un sport qui utilise toutes les parties du corps, amène une détente de l'esprit et une certaine philosophie de la vie tout en développant le sens du rythme. Elle apprend à réagir rapidement pour éviter ou attaquer son adversaire. Elle améliore la vitesse, les reflexes et l'agilité, tout en agisant fortement sur l'équilibre. Nos séances sont encadrées par un maître brésilien.",
+                    Text("Art de lutte brésilien exécuté sur un rythme et avec des instruments du Brésil, c'est un sport qui utilise toutes les parties du corps, amène une détente de l'esprit et une certaine philosophie de la vie tout en développant le sens du rythme. Elle apprend à réagir rapidement pour éviter ou attaquer son adversaire. Elle améliore la vitesse, les reflexes et l'agilité, tout en agisant fortement sur l'équilibre. Nos séances sont encadrées par un maître brésilien.",
                       style: textStyleText(context),),
 
                     const SizedBox(height: 30,),
@@ -129,7 +129,7 @@ class MovCombat extends StatelessWidget {
 
                     Text("Depuis 1976 à Seclin, la boxe Américaine est pratiquée au MYCS pour le loisir, le combat et la condition physique.",
                       style: textStyleText(context).copyWith(fontWeight: FontWeight.bold),),
-                    Text("Apparu en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gages de puissance.",
+                    Text("Apparu en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gage de puissance.",
                       style: textStyleText(context),),
                     const SizedBox(height: 30,),
                     Text(
@@ -150,7 +150,7 @@ class MovCombat extends StatelessWidget {
                       height: 20,
                     ),
 
-                    Text("Art de lutte brésilien éxécuté sur un rythme et avec des instruments du Brésil, c'est un sport qui utilise toutes les parties du corps, amène une détente de l'esprit et une certaine philosophie de la vie tout en développant le sens du rythme. Elle apprend à réagir rapidement pour éviter ou attaquer son adversaire. Elle améliore la vitesse, les reflexes et l'agilité, tout en agisant fortement sur l'équilibre. Nos séances sont encadrées par un maître brésilien.",
+                    Text("Art de lutte brésilien exécuté sur un rythme et avec des instruments du Brésil, c'est un sport qui utilise toutes les parties du corps, amène une détente de l'esprit et une certaine philosophie de la vie tout en développant le sens du rythme. Elle apprend à réagir rapidement pour éviter ou attaquer son adversaire. Elle améliore la vitesse, les reflexes et l'agilité, tout en agisant fortement sur l'équilibre. Nos séances sont encadrées par un maître brésilien.",
                       style: textStyleText(context),),
 
                     const SizedBox(height: 30,),

@@ -55,10 +55,10 @@ class AdminPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 70),
-              CustomButton(
+             /*CustomButton(
                 onPressed: () => GoRouter.of(context).go('/addUser'),
                 label: 'Je crée un compte',
-              ),
+              ),*/
               const SizedBox(height: 70), // Remplacez par :
               SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
               CustomButton(
@@ -121,9 +121,9 @@ class AdminPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CustomButton(
+                      /*CustomButton(
                           onPressed: () => GoRouter.of(context).go('/addUser'),
-                          label: 'Je crée un compte'),
+                          label: 'Je crée un compte'),*/
                       const SizedBox(
                         width: 35,
                       ),

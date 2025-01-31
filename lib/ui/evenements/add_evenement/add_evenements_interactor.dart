@@ -1,4 +1,6 @@
 import 'dart:typed_data';
+
+
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
@@ -8,16 +10,20 @@ import 'package:path/path.dart' as path;
 import '../../../core/api/firestore_service.dart';
 import '../../../core/api/storage_service.dart';
 import '../../../core/di/di.dart';
-import '../../../data/repository/evenement_repository.dart';
+import '../../../data/repository/evenement_repository_impl.dart';
 import '../../../domain/entity/evenements.dart';
 import '../../../domain/usecase/fetch_evenement_data_usecase.dart';
 
+
+
 @injectable
-class AddEvenementsInteractor {
-  final evenementsRepository = getIt<EvenementsRepository>();
-  final fetchEvenementDataUseCase = getIt<FetchEvenementDataUseCase>();
+class EvenementsInteractor {
+  final EvenementsRepositoryImpl  evenementsRepositoryImpl;
+  final FetchEvenementDataUseCase fetchEvenementDataUseCase;
   final storageService = getIt<StorageService>();
   final firestore = getIt<FirestoreService>();
+
+  EvenementsInteractor(this.fetchEvenementDataUseCase, {required this.evenementsRepositoryImpl});
 
   /// Récupère les données des événements depuis Firestore.
   Future<Iterable<Evenement>> fetchEvenementData() async {

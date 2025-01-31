@@ -27,6 +27,7 @@ void main() async {
     DefaultFirebaseOptions.currentPlatform, // Utilisez les options générées
   );
 
+
   configureDependencies();
 
   runApp(const MyApp());

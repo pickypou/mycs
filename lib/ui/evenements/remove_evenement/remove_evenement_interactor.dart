@@ -1,17 +1,17 @@
 
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 
-import '../../../core/di/di.dart';
 import '../../../data/repository/evenement_repository.dart';
 import '../../../domain/entity/evenements.dart';
 import '../../../domain/usecase/fetch_evenement_data_usecase.dart';
 
-
+@injectable
 class EvenementListInteractor {
-  final  fetchEvenementDataUseCase = getIt<FetchEvenementDataUseCase>();
-  final  evenementsRepository = getIt<EvenementsRepository>();
+  final FetchEvenementDataUseCase fetchEvenementDataUseCase ;
+  final EvenementsRepository evenementsRepository;
 
-  EvenementListInteractor(
+  EvenementListInteractor(this.fetchEvenementDataUseCase, this.evenementsRepository
       );
 
   Future<Iterable<Evenement>> fetchEvenementData() async {

@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   Text("Zen Moving", style: textStyleTextAccueil(context)),
                   Text("Step Mov", style: textStyleTextAccueil(context)),
                   Text("Moving Show", style: textStyleTextAccueil(context)),
-                  Text("Boxe américaine et kick boxing", style: textStyleTextAccueil(context)),
+                  Text("Boxe américaine et Kick boxing", style: textStyleTextAccueil(context)),
                   Text("Capoeira", style: textStyleTextAccueil(context)),
                   Text("Yoga", style: textStyleTextAccueil(context)),
 
@@ -134,7 +134,7 @@ class HomePage extends StatelessWidget {
                 Text("Zen Moving", style: titleStyleSmall(context)),
                 Text("Step Mov", style: titleStyleSmall(context)),
                 Text("Moving Show", style: titleStyleSmall(context)),
-                Text("Boxe américaine et kick boxing", style: titleStyleSmall(context)),
+                Text("Boxe américaine et Kick boxing", style: titleStyleSmall(context)),
                 Text("Capoeira", style: titleStyleSmall(context)),
                 Text("Yoga", style: titleStyleSmall(context)),
 
