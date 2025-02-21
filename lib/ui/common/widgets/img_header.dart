@@ -28,9 +28,9 @@ class ImgHeader extends StatelessWidget {
       return Padding(
           padding: const EdgeInsets.all(20),
           child: ImageCarousel(
-            imageUrl: images,
             height: 350,
-            fraction: 1,
+            fraction: 0.7,
+            imageUrl: images,
             autoPlay: true,
             isFromAssets: true,
           ));
@@ -53,7 +53,7 @@ class ImgHeader extends StatelessWidget {
             child: Image.asset(
               'assets/images/moving/moving_7.jpeg',
               fit: BoxFit.contain,
-             // height: 350,
+              // height: 350,
               //width: size.width*0.3,
             ),
           ),

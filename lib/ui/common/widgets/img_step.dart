@@ -7,8 +7,6 @@ class ImgStep extends StatelessWidget {
   final List<String> images = [
     'assets/images/step/step_1.jpeg',
     'assets/images/step/step_2.jpeg',
-
-
   ];
   @override
   Widget build(BuildContext context) {
@@ -29,9 +27,9 @@ class ImgStep extends StatelessWidget {
       return Padding(
           padding: const EdgeInsets.all(20),
           child: ImageCarousel(
-            imageUrl: images,
             height: 350,
             fraction: 0.7,
+            imageUrl: images,
             autoPlay: true,
             isFromAssets: true,
           ));

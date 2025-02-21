@@ -21,11 +21,11 @@ class Evenement {
 
   // Retourne l'image de la vignette ou une image par défaut
   ImageProvider<Object> getThumbnailImage() {
-    print('Chargement de la vignette : $thumbnailUrl'); // Debug
+    //print('Chargement de la vignette : $thumbnailUrl'); // Debug
     if (thumbnailUrl != null && thumbnailUrl!.isNotEmpty) {
       return NetworkImage(thumbnailUrl!);
     } else {
-      print('Aucune vignette trouvée, utilisation du logo par défaut.');
+      //print('Aucune vignette trouvée, utilisation du logo par défaut.');
       return const AssetImage('assets/images/logo.png');
     }
   }

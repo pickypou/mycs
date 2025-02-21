@@ -15,15 +15,15 @@ Future<void> deleteEvent(BuildContext context, String eventId) async {
         // Supprimer le fichier dans Firebase Storage
         final ref = FirebaseStorage.instance.refFromURL(fileUrl);
         await ref.delete();
-        debugPrint('Fichier Storage supprimé avec succès');
+       // debugPrint('Fichier Storage supprimé avec succès');
       }
     }
 
     // Supprimer le document Firestore
     await FirebaseFirestore.instance.collection('evenement').doc(eventId).delete();
-    debugPrint('Document Firestore supprimé avec succès');
+   // debugPrint('Document Firestore supprimé avec succès');
   } catch (e) {
-    debugPrint('Erreur lors de la suppression : $e');
+   // debugPrint('Erreur lors de la suppression : $e');
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Erreur : Impossible de supprimer l\'événement')),
     );
