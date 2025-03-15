@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mycs/ui/common/widgets/clickable_image.dart';
 import '../../theme.dart';
+import 'clickable_image.dart';
 
 class Footer extends StatelessWidget {
   final double? fontSize;
@@ -26,6 +26,7 @@ class Footer extends StatelessWidget {
                   ClickableImage(
                       imagePath: 'assets/images/logo.png',
                       route: "/admin"),
+
                   Flexible(
                     child: Text(
                       "© 2025 MYCS tous droits réservés",
@@ -35,7 +36,7 @@ class Footer extends StatelessWidget {
                   ),
                   Flexible(child:
                   Text(
-                    "N° d'agrément Jeunesse et Sport : 59s2",
+                    "N° d'agrément Jenesse et Sport 59s2",
                     style: textStyleTextAccueil(context),
                     overflow: TextOverflow.ellipsis,
                   ),

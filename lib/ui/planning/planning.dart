@@ -92,6 +92,9 @@ class PlanningTable extends StatelessWidget {
                       jour_2: 'Jeudi',
                       heures_2: '18h30-19h45',
                       categories_2: 'Débutants',
+                      jour_3: 'Vendredi',
+                      heures_3: '14h00-15h15',
+                      categories_3: '',
                     ),
                     CardPlanning(
                       title: 'Capoeira ',

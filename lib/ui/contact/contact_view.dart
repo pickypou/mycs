@@ -25,9 +25,9 @@ class ContactView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
                 Text("Nous contacter", style: titleStyleMedium(context)),
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -63,7 +63,7 @@ class ContactView extends StatelessWidget {
                   "N° d'agrément Jeunesse et Sport : 59s2",
                   style: textStyleTextAccueil(context),
                 ),
-                const SizedBox(height: 55),
+                const SizedBox(height: 25),
                 Footer(),
               ],
             ),
@@ -81,13 +81,13 @@ class ContactView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 25),
+                const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.center,
                   child:  Text("Nous contacter", style: titleStyleMedium(context)),
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -103,7 +103,7 @@ class ContactView extends StatelessWidget {
                                 imagePath: 'assets/images/facebook.png',
                                 url: 'https://www.facebook.com/search/top?q=mycs',
                               ),
-                              const SizedBox(height: 5),
+
                               Text(
                                 'Suivez-nous sur Facebook',
                                 style: textStyleText(context),
@@ -111,7 +111,7 @@ class ContactView extends StatelessWidget {
                             ],
                           ),
 
-                          const SizedBox(height: 35),
+                          const SizedBox(height: 20),
                           Image.asset('assets/images/dojo.png'),
                           const SizedBox(height: 10),
                           Text(
@@ -137,7 +137,7 @@ class ContactView extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: 70),
+                const SizedBox(height: 55),
                 Footer(),
               ],
             ),

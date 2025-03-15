@@ -129,7 +129,7 @@ class MovCombat extends StatelessWidget {
 
                     Text("Depuis 1976 à Seclin, la boxe Américaine est pratiquée au MYCS pour le loisir, le combat et la condition physique.",
                       style: textStyleText(context).copyWith(fontWeight: FontWeight.bold),),
-                    Text("Apparu en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gage de puissance.",
+                    Text("Apparue en france dans la seconde moitié des seventies, la boxe Américaine (ex Full-Contact) s'est imposée comme l'élément moteur des sports pieds-poings. De la catégorie des boxes pieds-poings, en plus de son aspect sportif, la boxe américaine constitue un moyen de self-défense redoutable. Elle permet d'acquérir une grande souplesse en même temps que renforcement musculaire et vitesse d'exécution, gage de puissance.",
                       style: textStyleText(context),),
                     const SizedBox(height: 30,),
                     Text(

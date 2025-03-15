@@ -80,6 +80,7 @@ TextStyle textStyleTextAccueil(BuildContext context) {
 
   return  GoogleFonts.montserrat().copyWith(
     fontSize:calculateFontSize(context, ratio: 100),
+    fontWeight: FontWeight.w700,
     color: Theme.of(context).colorScheme.onSecondary,
     decoration: TextDecoration.none,
   );
@@ -89,8 +90,7 @@ TextStyle textStyleTextAppBar(BuildContext context) {
 
   return
     GoogleFonts.montserrat().copyWith(
-      fontSize:calculateFontSize(context, ratio: 80),
-      fontWeight: FontWeight.bold,
+      fontSize:calculateFontSize(context, ratio: 85),
       color: Theme.of(context).colorScheme.secondary,
       decoration: TextDecoration.none,
     );
