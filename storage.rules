@@ -1,15 +1,18 @@
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
-    // Autoriser la lecture publique pour tous les fichiers dans le dossier 'evenement'
+
+    // Autoriser lecture publique ET écriture pour utilisateurs connectés dans /evenement
     match /evenement/{allPaths=**} {
       allow read: if true;
-
+      allow write: if request.auth != null;
     }
-    // Autoriser la lecture publique pour les fichiers spécifiques sous 'evenement/unique_event'
+
+    // (Optionnel) Règle plus spécifique pour /evenement/unique_event
     match /evenement/unique_event/{allPaths=**} {
       allow read: if true;
-
+      allow write: if request.auth != null;
     }
+
   }
 }

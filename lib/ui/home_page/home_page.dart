@@ -37,16 +37,18 @@ class HomePage extends StatelessWidget {
                     height: 35,
                   ),
                   ImgHeader(),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Align(
                       alignment: Alignment.topLeft,
-                      child:
-                      Text(
+                      child: Text(
                         "MYCS :",
                         style: textStyleTextAccueil(context),
                       )),
-                  const SizedBox(height: 5,),
-
+                  const SizedBox(
+                    height: 5,
+                  ),
                   Text(
                     "1 sigle = 4 mots : Moving-Yoga-Combat-Seclin.",
                     style: textStyleText(context),
@@ -55,16 +57,22 @@ class HomePage extends StatelessWidget {
                     "4 mots = pour 8 disciplines :",
                     style: textStyleText(context),
                   ),
-                  Text("Moving", style: textStyleTextAccueil(context),),
+                  Text(
+                    "Moving",
+                    style: textStyleTextAccueil(context),
+                  ),
                   Text("Zen Moving", style: textStyleTextAccueil(context)),
                   Text("Step Mov", style: textStyleTextAccueil(context)),
                   Text("Moving Show", style: textStyleTextAccueil(context)),
-                  Text("Boxe américaine et Kick boxing", style: textStyleTextAccueil(context)),
+                  Text("Boxe américaine et Kick boxing",
+                      style: textStyleTextAccueil(context)),
                   Text("Capoeira", style: textStyleTextAccueil(context)),
                   Text("Yoga", style: textStyleTextAccueil(context)),
-
-                  Text("6 = 6 jours de fonctionnement du lundi au samedi.",style: textStyleText(context)),
-                  Text("12 = 12 encadrants pour une équipe compétente et ultra motivée !", style: textStyleText(context)),
+                  Text("6 = 6 jours de fonctionnement du lundi au samedi.",
+                      style: textStyleText(context)),
+                  Text(
+                      "12 = 12 encadrants pour une équipe compétente et ultra motivée !",
+                      style: textStyleText(context)),
                   Text(
                     "50 = 50 années d'existence de ce club d'aujourd'hui !",
                     style: textStyleText(context),
@@ -77,92 +85,117 @@ class HomePage extends StatelessWidget {
                     "A partir de 6 ans jusqu'à...tout l'temps ! ! !",
                     style: textStyleTextAccueil(context),
                   ),
-                  const SizedBox(height: 30,),
-                  Text("Votre club sport, santé, bien-être", style: textStyleTextAccueil(context),),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    "Votre club sport, santé, bien-être",
+                    style: textStyleTextAccueil(context),
+                  ),
                   const SizedBox(
                     height: 55,
                   ),
-
                 ],
               ),
-
             ),
           ),
-          bottomNavigationBar: Footer()
-      );
+          bottomNavigationBar: Footer());
     } else {
       return Scaffold(
-        appBar: const CustomAppBar(title: ''),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(25, 50, 25, 0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("assets/images/logo.png",
-                fit: BoxFit.contain,width: size.width *0.5,),
-                const SizedBox(
-                  height: 35,
+          appBar: const CustomAppBar(title: ''),
+          body: Column(children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(25, 50, 25, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "assets/images/logo.png",
+                        fit: BoxFit.contain,
+                        width: size.width * 0.5,
+                      ),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      Text(
+                        'UN CLUB POUR TOUTES ET TOUS',
+                        style: titleStyleMedium(context),
+                      ),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      ImgHeader(),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "MYCS :",
+                            style: titleStyleSmall(context),
+                          )),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      Text(
+                        "1 sigle = 4 mots : Moving-Yoga-Combat-Seclin.",
+                        style: textStyleText(context),
+                      ),
+                      Text(
+                        "4 mots = pour 8 disciplines :",
+                        style: textStyleText(context),
+                      ),
+                      Text(
+                        "Moving",
+                        style: titleStyleSmall(context),
+                      ),
+                      Text("Zen Moving", style: titleStyleSmall(context)),
+                      Text("Step Mov", style: titleStyleSmall(context)),
+                      Text("Moving Show", style: titleStyleSmall(context)),
+                      Text("Boxe américaine et Kick boxing",
+                          style: titleStyleSmall(context)),
+                      Text("Capoeira", style: titleStyleSmall(context)),
+                      Text("Yoga", style: titleStyleSmall(context)),
+                      Text("6 = 6 jours de fonctionnement du lundi au samedi.",
+                          style: textStyleText(context)),
+                      Text(
+                          "12 = 12 encadrants pour une équipe compétente et ultra motivée !",
+                          style: textStyleText(context)),
+                      Text(
+                        "50 = 50 années d'existence de ce club d'aujourd'hui !",
+                        style: textStyleText(context),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Un club cinquantenaire pour tous les âges et tous les niveaux.",
+                        style: titleStyleSmall(context),
+                      ),
+                      Text(
+                        "A partir de 6 ans jusqu'à...tout l'temps ! ! !",
+                        style: titleStyleSmall(context),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Votre club sport, santé, bien-être",
+                        style: titleStyleSmall(context),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                    ],
+                  ),
                 ),
-                Text(
-                  'UN CLUB POUR TOUTES ET TOUS',
-                  style: titleStyleMedium(context),
-                ),
-                const SizedBox(
-                  height: 35,
-                ),
-                ImgHeader(),
-                const SizedBox(height: 35,),
-                Align(
-                    alignment: Alignment.topLeft,
-                    child:
-                    Text(
-                      "MYCS :",
-                      style: titleStyleSmall(context),
-                    )),
-                const SizedBox(height: 35,),
-
-                Text(
-                  "1 sigle = 4 mots : Moving-Yoga-Combat-Seclin.",
-                  style: textStyleText(context),
-                ),
-                Text(
-                  "4 mots = pour 8 disciplines :",
-                  style: textStyleText(context),
-                ),
-                Text("Moving", style: titleStyleSmall(context),),
-                Text("Zen Moving", style: titleStyleSmall(context)),
-                Text("Step Mov", style: titleStyleSmall(context)),
-                Text("Moving Show", style: titleStyleSmall(context)),
-                Text("Boxe américaine et Kick boxing", style: titleStyleSmall(context)),
-                Text("Capoeira", style: titleStyleSmall(context)),
-                Text("Yoga", style: titleStyleSmall(context)),
-
-                Text("6 = 6 jours de fonctionnement du lundi au samedi.",style: textStyleText(context)),
-                Text("12 = 12 encadrants pour une équipe compétente et ultra motivée !", style: textStyleText(context)),
-                Text(
-                  "50 = 50 années d'existence de ce club d'aujourd'hui !",
-                  style: textStyleText(context),
-                ),
-                const SizedBox(height: 30,),
-                Text(
-                  "Un club cinquantenaire pour tous les âges et tous les niveaux.",
-                  style: titleStyleSmall(context),
-                ),
-                Text(
-                  "A partir de 6 ans jusqu'à...tout l'temps ! ! !",
-                  style: titleStyleSmall(context),
-                ),
-                const SizedBox(height: 30,),
-                Text("Votre club sport, santé, bien-être", style: titleStyleSmall(context),),
-
-
-              ],
+              ),
             ),
-          ),
-        ),
-          bottomNavigationBar: Footer()
-      );
+            Footer(),
+            //const SizedBox(height: 25,)
+          ]));
     }
   }
 }

@@ -121,12 +121,12 @@ class AdminPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      /*CustomButton(
+                     /* CustomButton(
                           onPressed: () => GoRouter.of(context).go('/addUser'),
-                          label: 'Je crée un compte'),*/
+                          label: 'Je crée un compte'),
                       const SizedBox(
                         width: 35,
-                      ),
+                      ),*/
                       CustomButton(
                         onPressed: () {
                           checkUserConnection(context);
