@@ -16,6 +16,7 @@ import 'package:mycs/ui/users/add_user_module.dart';
 import 'package:mycs/ui/users/login/login_module.dart';
 import 'package:mycs/ui/view_all/view_all_module.dart';
 import '../../core/di/di.dart';
+import '../../ui/yoga/yoga_module.dart';
 import '../../ui/zen_moving/zen_moving_module.dart';
 
 
@@ -37,7 +38,8 @@ class AppRouterConfig {
       ...getIt<PlanningModule>().getRoutes(),
       ...getIt<ContactModule>().getRoutes(),
       ...getIt<AddEvenementModule>().getRoutes(),
-      ...getIt<RemoveEvenementModule>().getRoutes()
+      ...getIt<RemoveEvenementModule>().getRoutes(),
+      ...getIt<YogaModule>().getRoutes(),
 
     ],
     errorBuilder: (context, state) => const ErrorPage(),

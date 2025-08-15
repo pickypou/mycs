@@ -43,6 +43,7 @@ import '../../ui/ui_module.dart' as _i573;
 import '../../ui/users/add_user_module.dart' as _i753;
 import '../../ui/users/login/login_module.dart' as _i863;
 import '../../ui/view_all/view_all_module.dart' as _i261;
+import '../../ui/yoga/yoga_module.dart' as _i45;
 import '../../ui/zen_moving/zen_moving_module.dart' as _i750;
 import '../api/auth_service.dart' as _i893;
 import '../api/firebase_client.dart' as _i785;
@@ -71,36 +72,37 @@ _i174.GetIt init(
   gh.lazySingleton<_i59.FirebaseAuth>(() => appModule.firebaseAuth);
   gh.lazySingleton<_i457.FirebaseStorage>(() => appModule.firebaseStorage);
   gh.lazySingleton<_i974.FirebaseFirestore>(() => appModule.firebaseFirestore);
-  gh.singleton<_i692.AccountModule>(
-      () => _i692.AccountModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i727.AdminPageModule>(
-      () => _i727.AdminPageModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i106.ContactModule>(
-      () => _i106.ContactModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i966.AddEvenementModule>(
-      () => _i966.AddEvenementModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i418.EvenementPageModule>(
-      () => _i418.EvenementPageModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i331.RemoveEvenementModule>(
-      () => _i331.RemoveEvenementModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i442.MovingModule>(
-      () => _i442.MovingModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i529.MovingShowModule>(
-      () => _i529.MovingShowModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i1009.MovCombatModule>(
-      () => _i1009.MovCombatModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i18.PlanningModule>(
-      () => _i18.PlanningModule(gh<_i573.AppRouter>()));
   gh.singleton<_i640.StepMovModule>(
       () => _i640.StepMovModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i753.AddUserModule>(
-      () => _i753.AddUserModule(gh<_i573.AppRouter>()));
-  gh.singleton<_i863.LoginModule>(
-      () => _i863.LoginModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i18.PlanningModule>(
+      () => _i18.PlanningModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i727.AdminPageModule>(
+      () => _i727.AdminPageModule(gh<_i573.AppRouter>()));
   gh.singleton<_i261.ViewAllModule>(
       () => _i261.ViewAllModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i418.EvenementPageModule>(
+      () => _i418.EvenementPageModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i966.AddEvenementModule>(
+      () => _i966.AddEvenementModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i331.RemoveEvenementModule>(
+      () => _i331.RemoveEvenementModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i1009.MovCombatModule>(
+      () => _i1009.MovCombatModule(gh<_i573.AppRouter>()));
   gh.singleton<_i750.ZenMovingModule>(
       () => _i750.ZenMovingModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i692.AccountModule>(
+      () => _i692.AccountModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i529.MovingShowModule>(
+      () => _i529.MovingShowModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i106.ContactModule>(
+      () => _i106.ContactModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i442.MovingModule>(
+      () => _i442.MovingModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i45.YogaModule>(() => _i45.YogaModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i863.LoginModule>(
+      () => _i863.LoginModule(gh<_i573.AppRouter>()));
+  gh.singleton<_i753.AddUserModule>(
+      () => _i753.AddUserModule(gh<_i573.AppRouter>()));
   gh.factory<_i151.UsersRepository>(() => _i304.UsersRepositoryImpl(
         gh<_i974.FirebaseFirestore>(),
         gh<_i59.FirebaseAuth>(),
